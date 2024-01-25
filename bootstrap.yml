@@ -1,0 +1,25 @@
+---
+- name: Playbook for installing dotfiles
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Linux-Desktop
+      tags: linux
+      ansible.builtin.import_role:
+        name: linux-desktop
+
+    - name: Awesome
+      tags: awesome
+      ansible.builtin.import_role:
+        name: awesome
+
+    - name: Tools
+      tags: tools
+      ansible.builtin.import_role:
+        name: tools
+
+    - name: Stow
+      tags: stow
+      ansible.builtin.import_role:
+        name: stow

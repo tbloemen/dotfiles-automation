@@ -1,0 +1,24 @@
+---
+- name: Install flatpak in Debian
+  become: true
+  ansible.builtin.apt:
+    name: flatpak
+  when: ansible_os_family == "Debian"
+
+- name: Add the flathub flatpak repository remote to the user installation
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+
+- name: Install apps with Flatpak
+  community.general.flatpak:
+    name:
+      - com.spotify.Client
+      - com.bitwarden.desktop
+      - com.logseq.Logseq
+      - com.todoist.Todoist
+      - io.github.mimbrero.WhatsAppDesktop
+      - us.zoom.Zoom
+    method: user

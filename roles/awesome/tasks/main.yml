@@ -1,0 +1,14 @@
+---
+- name: Install awesome packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - awesome
+      - rofi
+      - variety
+      - picom
+      - redshift
+      - brightnessctl
+      - luarocks
+      - papirus-icon-theme
+  when: ansible_os_family == "Debian"
