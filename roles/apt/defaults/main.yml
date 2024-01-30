@@ -1,0 +1,25 @@
+apt_package_upgrade: true
+apt_packages:
+  - ansible
+  - awesome
+  - brightnessctl
+  - code
+  - exa
+  - fastfetch
+  - firefox
+  - fish
+  - git
+  - imagemagick
+  - luarocks
+  - nano
+  - nemo
+  - npm
+  - papirus-icon-theme
+  - picom
+  - python3
+  - redshift
+  - rofi
+  - speedtest-cli
+  - thunderbird
+  - timeshift
+  - variety

@@ -1,0 +1,11 @@
+- name: Upgrade apt
+  ansible.builtin.apt:
+    upgrade: true
+  when: apt_package_upgrade
+  become: true
+
+- name: Install apt packages
+  ansible.builtin.apt:
+    name: "{{ item }}"
+  become: true
+  loop: "{{ apt_packages }}"

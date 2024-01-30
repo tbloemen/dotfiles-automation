@@ -4,22 +4,17 @@
   connection: local
 
   tasks:
-    - name: Linux-Desktop
-      tags: linux
+    - name: Install all dotfiles
+      tags: dotfiles
       ansible.builtin.import_role:
-        name: linux-desktop
+        name: dotfiles
 
-    - name: Awesome
-      tags: awesome
+    - name: Apt
+      tags: apt
       ansible.builtin.import_role:
-        name: awesome
+        name: apt
 
-    - name: Tools
-      tags: tools
+    - name: Flatpak
+      tags: flatpak
       ansible.builtin.import_role:
-        name: tools
-
-    - name: Stow
-      tags: stow
-      ansible.builtin.import_role:
-        name: stow
+        name: flatpak

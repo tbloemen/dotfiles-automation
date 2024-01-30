@@ -19,6 +19,4 @@
       - com.bitwarden.desktop
       - com.logseq.Logseq
       - com.todoist.Todoist
-      - io.github.mimbrero.WhatsAppDesktop
-      - us.zoom.Zoom
     method: user
